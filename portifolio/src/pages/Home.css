@@ -1,0 +1,108 @@
+.home-container {
+    padding: 0 10%;
+    background-color: #F8F9FA;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.welcome-msg {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    color: #212529;
+    margin-bottom: 10px;
+}
+
+.name-highlight {
+    color: #D63384; /* Seu rosa magenta */
+}
+
+.role-text {
+    font-size: 2rem;
+    color: #212529;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #6c757d;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+/* Estilo da Foto */
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-bg-card {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.profile-photo {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Botões */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary {
+    background: #D63384;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background: white;
+    color: #212529;
+    border: 1px solid #dee2e6;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+}
