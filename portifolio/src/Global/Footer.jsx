@@ -8,6 +8,8 @@ function Footer(){
   <div class="footer-bottom">
     <p>&copy; 2025 - Developed by Joyce. All rights reserved.</p>
   </div>
+    <a href="/privacy">Privacy Policy</a>
+
 </footer>
 </div>
 
