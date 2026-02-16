@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import aboutImg from '../assets/joyce_foto.jpeg'; 
+import aboutImg from '../assets/Joyce_foto.jpeg'; 
 
 function About() {
   return (
