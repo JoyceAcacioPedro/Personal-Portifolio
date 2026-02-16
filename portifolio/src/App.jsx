@@ -1,6 +1,3 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './Global/Header';
@@ -12,7 +9,7 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact'; 
 import Blog from './pages/Blog'; 
 import Resume from './pages/Resume'; 
-import Privacy from "./Privacy";
+import Privacy from  './Privacy';
 
 function App() {
 
