@@ -1,6 +1,5 @@
 import React from 'react';
 import './About.css';
-import aboutImg from '../../assets/Joyce_foto.jpeg'; 
 
 function About() {
   return (
@@ -9,7 +8,7 @@ function About() {
         {/* Lado Esquerdo: Imagem */}
         <div className="about-image">
           <div className="image-wrapper">
-            <img src={aboutImg} alt="Joyce Pedro - Software & Systems Engineer" />
+            <img src="/Joyce_foto.jpeg" alt="Joyce Pedro - Software & Systems Engineer" />
           </div>
         </div>
 

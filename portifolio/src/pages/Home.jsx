@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Importação necessária para o link funcionar
 import './Home.css';
-import profileImg from '../assets/joyce_foto.jpeg'; 
-"import profileRES from '../assets/JOYCE ACÁCIO PEDRO_ En Curiculum.docx';"
+
 
 function Home() {
   return (
@@ -35,7 +34,7 @@ function Home() {
 
         <div className="hero-image-container">
           <div className="image-bg-card">
-            <img src={profileImg} alt="Joyce Pedro - Engineering Student" className="profile-photo" />
+            <img src= "/Joyce_foto.jpeg" alt="Joyce Pedro - Engineering Student" className="profile-photo" />
           </div>
         </div>
       </section>
