@@ -5,28 +5,33 @@ function About() {
   return (
     <section className="about-page">
       <div className="about-container">
-        {/* Lado Esquerdo: Imagem */}
+
         <div className="about-image">
           <div className="image-wrapper">
             <img src="/Joyce_foto.jpeg" alt="Joyce Pedro - Software & Systems Engineer" />
           </div>
         </div>
 
-        {/* Lado Direito: Texto */}
         <div className="about-text">
           <p className="subtitle">BIOGRAPHY</p>
           <h1>Bridging the gap between <span className="highlight">Systems & Intelligence</span></h1>
-          
+
           <div className="description">
             <p>
-              I am a <strong>Computer Science and Telecommunications Engineering</strong> student, 
+              I am a <strong>Computer Science and Telecommunications Engineering</strong> student,
               combining a deep understanding of infrastructure with a passion for <strong>Software Engineering and AI</strong>.
             </p>
-           <p>
-My background allows me to build <strong>intelligent applications</strong>, like <strong>RAG-based chatbots</strong>, optimized for the underlying network and hardware environment. I focus on delivering <strong>automated solutions</strong> that provide real efficiency and value.  
-Whether designing <strong>Full Stack systems</strong> or creating <strong>AI-driven solutions</strong>, I bring a logical, problem-solving mindset to every challenge. My <strong>Full Stack expertise</strong> includes <strong>databases, API development, system integration, and cloud deployment</strong>, while my <strong>Applied AI skills</strong> cover <strong>RAG, LlamaIndex, LangChain, Embeddings, Generative AI, PyTorch, Hugging Face, LLMs, Natural Language Processing, and Prompt Engineering</strong>. This combination allows me to create <strong>scalable, intelligent, and user-friendly systems</strong> that anyone can use.
-</p>
-
+            <p>
+              My background allows me to build <strong>intelligent applications</strong>, like <strong>RAG-based chatbots</strong>,
+              optimized for the underlying network and hardware environment. I focus on delivering <strong>automated solutions</strong>
+              that provide real efficiency and value. Whether designing <strong>Full Stack systems</strong> or creating <strong>AI-driven
+              solutions</strong>, I bring a logical, problem-solving mindset to every challenge.
+            </p>
+            <p>
+              My <strong>Applied AI skills</strong> cover RAG, LlamaIndex, LangChain, Embeddings, Generative AI, PyTorch,
+              Hugging Face, LLMs, NLP, and Prompt Engineering — combined with Full Stack expertise in
+              databases, API development, system integration, and cloud deployment.
+            </p>
           </div>
 
           <div className="personal-info">
@@ -44,6 +49,7 @@ Whether designing <strong>Full Stack systems</strong> or creating <strong>AI-dri
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );

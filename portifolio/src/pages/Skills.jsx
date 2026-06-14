@@ -2,13 +2,43 @@ import React from 'react';
 import './Skills.css';
 
 function Skills() {
-  const softSkills = [
-    "Problem-solving mindset",
-    "Self-taught learner",
-    "Clear communication",
-    "Adaptability",
-    "Attention to detail",
-    "Time management"
+  const skillGroups = [
+    {
+      number: '01',
+      category: 'AI Engineering',
+      label: 'Primary Expertise',
+      description: 'Building intelligent systems with modern AI frameworks — from RAG pipelines to production-ready LLM applications.',
+      featured: true,
+      tags: ['RAG', 'LlamaIndex', 'LangChain', 'Embeddings', 'Generative AI', 'PyTorch', 'Hugging Face', 'LLMs', 'NLP', 'Prompt Engineering']
+    },
+    {
+      number: '02',
+      category: 'Full Stack Development',
+      label: 'Core Stack',
+      description: 'End-to-end development from database design to responsive frontends, with clean APIs connecting both sides.',
+      tags: ['Python', 'Django', 'REST API', 'React', 'JavaScript', 'HTML', 'CSS', 'SQL', 'PostgreSQL', 'Git', 'Authentication', 'Deployment']
+    },
+    {
+      number: '03',
+      category: 'IT Infrastructure',
+      label: 'Technical Foundation',
+      description: 'Hands-on experience with network systems and hardware from real airport IT operations.',
+      tags: ['TCP/IP', 'Networking', 'Technical Support', 'Hardware Maintenance', 'High-Availability Systems']
+    },
+    {
+      number: '04',
+      category: 'Telecommunications',
+      label: 'Academic Specialisation',
+      description: 'Core telecom engineering concepts studied at ISEUNA, bridging digital systems and signal infrastructure.',
+      tags: ['Network Protocols', 'Signal Processing', 'Digital Communications', 'Telecom Engineering']
+    },
+    {
+      number: '05',
+      category: 'Soft Skills',
+      label: 'How I Work',
+      description: 'The habits and mindset I bring to every project and team.',
+      tags: ['Problem Solving', 'Self-Directed Learning', 'Clear Communication', 'Adaptability', 'Attention to Detail', 'Time Management']
+    }
   ];
 
   return (
@@ -16,55 +46,27 @@ function Skills() {
       <header className="skills-header">
         <p className="subtitle">MY EXPERTISE</p>
         <h2>Professional <span className="highlight">Skills</span></h2>
+        <p className="skills-intro">A structured view of what I know and how I apply it.</p>
       </header>
 
-      <div className="skills-grid">
-        {/* Card 1: AI Engineering - O SEU MAIOR DESTAQUE */}
-        <div className="skill-card featured">
-          <div className="icon-box">🤖</div>
-          <h3>AI Engineering</h3>
-            <h3>AI Engineering</h3>
-           <p>
-    RAG (Retrieval-Augmented Generation), LlamaIndex, LangChain, Embeddings, Generative AI, 
-    PyTorch, Hugging Face, LLMs, Large Language Modeling, Natural Language Processing (NLP), 
-    Prompt Engineering.
-  </p>
-        </div>
-
-        {/* Card 2: Full Stack Development */}
-        <div className="skill-card">
-          <div className="icon-box">💻</div>
-          <h3>Full Stack Development</h3>
-          <p>  HTML, CSS, JavaScript, Python, React, Django, REST APIs, Database Design, 
-    SQL Databases, Authentication & Authorization, Backend Logic, 
-    Frontend State Management, System Integration, Version Control (Git), 
-    Testing & Debugging, Deployment, Cloud-Based Applications</p>
-        </div>
-
-        {/* Card 3: IT Infrastructure & Electronics - A SUA BASE TÉCNICA */}
-        <div className="skill-card">
-          <div className="icon-box">🔧</div>
-          <h3>IT Infrastructure</h3>
-          <p>Networking (TCP/IP), Electronics, Technical Support, and Hardware Maintenance.</p>
-        </div>
-
-        {/* Card 3: Telecommunications - TUA ENGENHARIA NO ISEUNA */}
-        <div className="skill-card">
-          <div className="icon-box">📡</div>
-          <h3>Telecommunications</h3>
-          <p>Fundamentals of Telecom Engineering and Network protocols. [cite: 12, 16]</p>
-        </div>
-
-        {/* Card 4: Soft Skills */}
-        <div className="skill-card">
-          <div className="icon-box">🧠</div>
-          <h3>Soft Skills</h3>
-          <ul className="soft-skills-list">
-            {softSkills.map((skill, index) => (
-              <li key={index}>{skill}</li>
-            ))}
-          </ul>
-        </div>
+      <div className="skills-list">
+        {skillGroups.map((group) => (
+          <div key={group.number} className={`skill-row ${group.featured ? 'featured' : ''}`}>
+            <div className="skill-row-left">
+              <span className="skill-number">{group.number}</span>
+              <div className="skill-meta">
+                <span className="skill-label">{group.label}</span>
+                <h3>{group.category}</h3>
+                <p className="skill-desc">{group.description}</p>
+              </div>
+            </div>
+            <div className="skill-tags">
+              {group.tags.map((tag, i) => (
+                <span key={i} className="skill-pill">{tag}</span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

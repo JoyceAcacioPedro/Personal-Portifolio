@@ -1,107 +1,194 @@
 .contact-page {
-    padding: 60px 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
+  padding: 80px 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #F8F9FA;
 }
 
 .contact-container {
-    display: flex;
-    gap: 50px;
-    width: 100%;
-    max-width: 1100px;
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 60px;
+  width: 100%;
+  max-width: 1100px;
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
 }
 
+/* INFO */
 .contact-info {
-    flex: 1;
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-info .subtitle {
+  color: #D63384;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
 .contact-info h2 {
-    font-size: 2.5rem;
-    color: #212529;
-    margin-bottom: 20px;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  color: #212529;
+  margin-bottom: 14px;
+  line-height: 1.2;
 }
 
 .highlight {
-    color: #D63384; /* O seu rosa de destaque */
+  color: #D63384;
+}
+
+.contact-intro {
+  color: #6c757d;
+  line-height: 1.7;
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  margin-bottom: 8px;
 }
 
 .info-items {
-    margin-top: 30px;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .info-item {
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.info-item strong {
-    color: #212529;
-    display: block;
-    font-size: 1.1rem;
+.info-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #D63384;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
-.info-item p {
-    color: #6c757d;
+.info-value {
+  color: #343a40;
+  font-size: 0.95rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
-/* Estilo do Formulário */
+.info-value:hover {
+  color: #D63384;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: #343a40;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 6px 16px;
+  border: 1px solid #dee2e6;
+  border-radius: 20px;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.social-links a:hover {
+  border-color: #D63384;
+  color: #D63384;
+  background: #fff0f6;
+}
+
+/* FORMULÁRIO */
 .contact-form {
-    flex: 1;
+  flex: 1;
+  min-width: 0;
 }
 
 .input-group {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .input-group label {
-    margin-bottom: 8px;
-    font-weight: 500;
-    color: #495057;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: #495057;
 }
 
-.input-group input, 
+.input-group input,
 .input-group textarea {
-    padding: 12px;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    font-family: inherit;
-    transition: border-color 0.3s;
+  padding: 12px 14px;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #212529;
+  background: #fafafa;
+  transition: border-color 0.25s, background 0.25s;
+  resize: vertical;
 }
 
-.input-group input:focus, 
+.input-group input:focus,
 .input-group textarea:focus {
-    outline: none;
-    border-color: #D63384;
+  outline: none;
+  border-color: #D63384;
+  background: #fff;
 }
 
 .btn-send {
-    background-color: #D63384;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    width: 100%;
-    transition: background 0.3s, transform 0.2s;
+  background-color: #D63384;
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 4px;
+  transition: background 0.2s, transform 0.15s;
 }
 
 .btn-send:hover {
-    background-color: #bc2b73;
-    transform: translateY(-2px);
+  background-color: #b5206a;
+  transform: translateY(-2px);
 }
 
-/* Responsividade para telemóveis */
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-        padding: 20px;
-    }
+/* TABLET */
+@media (max-width: 900px) {
+  .contact-page {
+    padding: 60px 6%;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 40px;
+    padding: 36px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 48px 5%;
+  }
+
+  .contact-container {
+    padding: 24px 20px;
+  }
+
+  .social-links {
+    gap: 10px;
+  }
 }

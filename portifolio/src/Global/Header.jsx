@@ -1,27 +1,72 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
-    return (
-        <header className='header-wrapper'>
-            <div className='header-container'>
-                <div className='logo'>
-                    <h2>Joyce<span>.</span></h2>
-                </div>
-                
-                <nav className='nav'>
-                    <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/aboutme">About Me</Link></li>
-                        <li><Link to="/skills">Skills</Link></li>
-                        <li><Link to="/projects">Projects</Link></li> 
-                        <li className='btn-pink'><Link to="/contact">Contact</Link></li>
-                        <li className='btn-pink'><Link to="/blog">Blog</Link></li>
-                    </ul> 
-                </nav>
-            </div>
-        </header>
-    );
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const navLinks = [
+    { to: '/', label: 'Home' },
+    { to: '/aboutme', label: 'About Me' },
+    { to: '/skills', label: 'Skills' },
+    { to: '/projects', label: 'Projects' },
+    { to: '/resume', label: 'Resume' },
+  ];
+
+  const ctaLinks = [
+    { to: '/blog', label: 'Blog' },
+    { to: '/contact', label: 'Contact' },
+  ];
+
+  return (
+    <header className="header-wrapper">
+      <div className="header-container">
+
+        <div className="logo">
+          <Link to="/"><h2>Joyce<span>.</span></h2></Link>
+        </div>
+
+        <nav className={`nav ${menuOpen ? 'open' : ''}`}>
+          <ul>
+            {navLinks.map(link => (
+              <li key={link.to}>
+                <Link
+                  to={link.to}
+                  className={location.pathname === link.to ? 'active' : ''}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+            {ctaLinks.map(link => (
+              <li key={link.to} className="btn-pink">
+                <Link
+                  to={link.to}
+                  className={location.pathname === link.to ? 'active' : ''}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <button
+          className={`hamburger ${menuOpen ? 'open' : ''}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+    </header>
+  );
 }
 
 export default Header;
