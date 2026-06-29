@@ -20,7 +20,7 @@ function Header() {
   ];
 
   return (
-    <header className="header-wrapper">
+      <div className="header-wrapper">
       <div className="header-container">
 
         <div className="logo">
@@ -65,7 +65,7 @@ function Header() {
         </button>
 
       </div>
-    </header>
+    </div>
   );
 }
 

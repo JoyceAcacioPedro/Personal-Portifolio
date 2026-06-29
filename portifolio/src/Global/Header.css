@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .header-container {
@@ -64,26 +64,6 @@
   color: #D63384;
 }
 
-/* CTA BUTTONS */
-.btn-pink a {
-  background-color: #D63384;
-  color: white !important;
-  padding: 8px 18px !important;
-  border-radius: 6px;
-  transition: background 0.2s, transform 0.15s;
-}
-
-.btn-pink a:hover {
-  background-color: #b5206a;
-  transform: translateY(-2px);
-  color: white !important;
-}
-
-.btn-pink a.active {
-  background-color: #b5206a;
-  color: white !important;
-}
-
 /* HAMBURGER */
 .hamburger {
   display: none;
@@ -119,26 +99,34 @@
 
 /* MOBILE */
 @media (max-width: 900px) {
+
+  .header-container {
+    padding: 0 20px;
+  }
+
   .hamburger {
     display: flex;
   }
 
-  .nav {
-    position: fixed;
-    top: 72px;
-    left: 0;
-    width: 100%;
-    background: #F8F9FA;
-    border-top: 1px solid #e9ecef;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    transform: translateY(-110%);
-    transition: transform 0.3s ease;
-    z-index: 999;
-  }
+.nav {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  width: 100%;
+  background: #F8F9FA;
+  border-top: 1px solid #e9ecef;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-110%);
+  transition: transform 0.3s ease, visibility 0.3s ease;
+  z-index: 999;
+  overflow: hidden;
+  visibility: hidden;
+}
 
-  .nav.open {
-    transform: translateY(0);
-  }
+.nav.open {
+  transform: translateY(0);
+  visibility: visible;
+}
 
   .nav ul {
     flex-direction: column;
@@ -152,16 +140,23 @@
     padding: 12px 0;
     font-size: 0.9rem;
     border-bottom: 1px solid #f0f0f0;
-  }
-
-  .btn-pink {
-    margin-top: 8px;
+    color: #495057;
   }
 
   .btn-pink a {
-    display: block;
+    color: #D63384 !important;
+    background: none !important;
+    border: none !important;
     text-align: center;
-    padding: 12px !important;
-    border-radius: 8px;
+    display: block;
+    padding: 12px 0 !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+  }
+
+  .btn-pink a:hover {
+    color: #b5206a !important;
+    background: none !important;
+    transform: none !important;
   }
 }
